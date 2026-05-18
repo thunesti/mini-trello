@@ -1,75 +1,32 @@
-# Nuxt Minimal Starter
+MAPPESTRUKTUR:
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
-
-Make sure to install dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+mini-trello/
+├── .nuxt/                 # Autogenerert av Nuxt
+├── app/                   # Nuxt 4 standard app-mappe (hvis aktivert, eller i rot)
+├── components/            # Gjenbrukbare UI-komponenter
+│   ├── AppHeader.vue      # Global toppmeny med navigasjon og logg-ut
+│   ├── BoardColumn.vue    # En kolonne (f.eks. "Todo", "In Progress")
+│   ├── TaskCard.vue       # Det enkle oppgave-kortet som kan klikkes på
+│   └── TaskForm.vue       # Skjema for å opprette/redigere en oppgave
+├── composables/           # Gjenbrukbar logikk
+│   ├── useAuth.ts         # Håndterer innlogging/utlogging og bruker-state
+│   └── useDragDrop.ts     # Logikk for å flytte oppgaver mellom kolonner
+├── layouts/               # Maler for sidene
+│   └── default.vue        # Standard layout med header og sidemeny
+├── pages/                 # Automatisk routing basert på filnavn
+│   ├── index.vue          # Innloggingsside (første møte med appen)
+│   ├── dashboard.vue      # Forside etter innlogging: Liste over prosjekter
+│   ├── project/
+│   │   └── [id].vue       # Prosjekt-detalj (Selve Trello-boardet: /project/1)
+│   ├── task/
+│   │   └── [id].vue       # Oppgave-detalj (Modal eller egen side for en oppgave)
+│   └── settings.vue       # Innstillinger (Profil, teams, farger)
+├── server/                # Server-ruter / API-mocking (Nuxt Nitro)
+│   └── api/
+│       └── mock.ts        # Eventuelle mock-data hvis dere vil simulerer backend
+├── stores/                # Pinia stores for delt tilstand
+│   ├── boardStore.ts      # Holder på prosjekter, kolonner og oppgaver
+│   └── userStore.ts       # Holder på innlogget bruker-info
+├── app.vue                # Hovedkomponenten som taster inn layouts og sider
+├── nuxt.config.ts         # Nuxt-konfigurasjon (aktiver Pinia, osv.)
+└── package.json
