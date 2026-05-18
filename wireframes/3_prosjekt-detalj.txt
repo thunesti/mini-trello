@@ -1,0 +1,21 @@
++-----------------------------------------------------------------------+
+| [M-T Logo]  Dashboard  Innstillinger                     (Ola Nordmann) |
++-----------------------------------------------------------------------+
+| << Tilbake til dashboard  /  Prosjekt: Eksamen Vår 2026               |
+|                                                                       |
+|  +-----------------+   +-----------------+   +-----------------+      |
+|  | TODO        (2) |   | IN PROGRESS (1) |   | DONE        (3) |      |
+|  +-----------------+   +-----------------+   +-----------------+      |
+|  | [Oppgave-kort]  |   | [Oppgave-kort]  |   | [Oppgave-kort]  |      |
+|  | Designe logo    |   | Koding av rutene|   | Sette opp Nuxt  |      |
+|  | (Gul tag: Low)  |   | (Rød tag: High) |   | (Grønn tag)     |      |
+|  |                 |   |                 |   |                 |      |
+|  | [Oppgave-kort]  |   +-----------------+   | [Oppgave-kort]  |      |
+|  | Skrive rapport  |                         | Lage repository |      |
+|  +-----------------+                         +-----------------+      |
+|  | [+ Ny oppgave]  |   | [+ Ny oppgave]  |   | [+ Ny oppgave]  |      |
+|  +-----------------+   +-----------------+   +-----------------+      |
+|                                                                       |
++-----------------------------------------------------------------------+
+Kommentar: Status-tags kan ha farger (Rød=Haster, Gul=Medium, Grønn=Ferdig).
+Klikk på et [Oppgave-kort] sender brukeren til `/task/:id`.

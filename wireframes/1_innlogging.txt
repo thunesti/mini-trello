@@ -1,0 +1,19 @@
++-----------------------------------------------------------------------+
+|                                                                       |
+|                      [  MINI-TRELLO LOGO  ]                           |
+|                                                                       |
+|                          +-----------------+                          |
+|                          |    Logg inn     |                          |
+|                          +-----------------+                          |
+|                          | Brukernavn      |                          |
+|                          | [_____________] |                          |
+|                          |                 |                          |
+|                          | Passord         |                          |
+|                          | [_____________] |                          |
+|                          |                 |                          |
+|                          | [ Logg inn ] --> Blå knapp                 |
+|                          +-----------------+                          |
+|                                                                       |
++-----------------------------------------------------------------------+
+Kommentar: Enkel vaktbikkje (middleware) sjekker om brukeren er logget inn.
+Hvis ja, sendes de rett til Dashboard.

@@ -1,0 +1,20 @@
++-----------------------------------------------------------------------+
+| [M-T Logo]  Dashboard  Innstillinger                     (Ola Nordmann) |
++-----------------------------------------------------------------------+
+|                                                                       |
+|    +-------------------------------------------------------------+    |
+|    | OPPGAVE: Koding av rutene                        [ Lukk X ] |    |
+|    | ----------------------------------------------------------- |    |
+|    | Beskrivelse:                                                |    |
+|    | Sette opp index, dashboard og dynamiske ruter i Nuxt 4.     |    |
+|    |                                                             |    |
+|    | Status: [ In Progress v ]   Prioritet: [ Høy (Rød) v ]      |    |
+|    |                                                             |    |
+|    | Ansvarlig: [ Ola Nordmann v ]                               |    |
+|    |                                                             |    |
+|    | [ Lagre Endringer ] --> Grønn knapp                         |    |
+|    +-------------------------------------------------------------+    |
+|                                                                       |
++-----------------------------------------------------------------------+
+Kommentar: Endringer her oppdaterer `boardStore.ts` i Pinia, som umiddelbart 
+reflekteres hvis du går tilbake til Trello-boardet.
