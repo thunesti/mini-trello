@@ -3,7 +3,7 @@
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 100 100" 
-      class="main-logo-svg"
+      class="mini-trello-svg"
     >
       <g class="skew-group">
         <rect x="15" y="25" width="18" height="50" rx="3" fill="#becfe4" fill-opacity="0.85" />
@@ -25,7 +25,7 @@
       </g>
     </svg>
 
-    <span class="logo-text">mini-Trello</span>
+    <span class="logo-text">Mini Trello</span>
   </div>
 </template>
 
@@ -42,9 +42,9 @@
 }
 
 /* SVG Størrelse og den futuristiske gløden */
-.main-logo-svg {
-  width: 40px;
-  height: 40px;
+.mini-trello-svg {
+  width: 120px;
+  height: 120px;
   filter: drop-shadow(0 0 6px rgba(168, 218, 220, 0.6));
 }
 
