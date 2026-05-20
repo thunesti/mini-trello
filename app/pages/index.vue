@@ -5,5 +5,15 @@
 </script>
 
 <template>
-	<h1>Welcome</h1>
+	<div class="logo-wrapper">
+		<MiniTrelloLogo />
+	</div>
 </template>
+
+<style scoped>
+	.logo-wrapper {
+		display: flex;
+		justify-content: center;
+		margin: 50px;
+	}
+</style>
