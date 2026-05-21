@@ -2,6 +2,18 @@
 	definePageMeta({
 	layout: 'blank'
 	})
+
+	const userStore = useUserStore()
+
+	const username = ref('')
+
+	function handleLogin() {
+		const success = userStore.login(username.value)
+		if (success) {
+			// Sender brukeren til dashboardet hvis navnet ikke var tomt
+			navigateTo('/dashboard')
+		}
+	}
 </script>
 
 <template>
@@ -10,12 +22,18 @@
 	</header>
 
 	<main class="login-box">
-		<form class="login-form">
-			<h2 class="form-title">Logg inn på terminalen</h2>
+		<form @submit.prevent="handleLogin" class="login-form">
+			<h2 class="form-title">Logg inn på appen</h2>
 			
 			<div class="input-group">
-				<label>Brukernavn:</label>
-				<input type="text" placeholder="Ditt brukernavn..." />
+				<label for="username">Bruk fornavnet ditt:</label>
+				<input 
+				id="username"
+				v-model="username" 
+				type="text" 
+				placeholder="..." 
+				required
+				/>
 			</div>
 			
 			<button type="submit">Start økt</button>
