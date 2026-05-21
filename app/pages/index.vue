@@ -36,7 +36,7 @@
 				/>
 			</div>
 			
-			<button type="submit">Start økt</button>
+			<button type="submit">Logg inn</button>
 		</form>
 	</main>
 </template>
