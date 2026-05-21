@@ -1,6 +1,10 @@
+<script>
+const header = "Test"
+const text = "Test info for board"
+</script>
 <template>
 <div>
-    <h2>Test</h2>
-    <p>Test info for a board</p>
+    <h2>{{ header }}</h2>
+    <p> {{ text }}</p>
 </div>
 </template>
