@@ -38,7 +38,7 @@
         </div>
 
         <button @click="handleError" class="stealth-btn">
-          GÅ TILBAKE
+          OMDIRIGER TIL DASHBOARD
         </button>
       </div>
     </main>
