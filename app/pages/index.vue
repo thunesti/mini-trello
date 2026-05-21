@@ -23,15 +23,15 @@
 
 	<main class="login-box">
 		<form @submit.prevent="handleLogin" class="login-form">
-			<h2 class="form-title">Logg inn på appen</h2>
+			<h2 class="form-title">Identifiser deg</h2>
 			
 			<div class="input-group">
-				<label for="username">Bruk fornavnet ditt:</label>
+				<label for="username">Navn / Brukernavn:</label>
 				<input 
 				id="username"
 				v-model="username" 
 				type="text" 
-				placeholder="..." 
+				placeholder="_" 
 				required
 				/>
 			</div>
@@ -57,13 +57,26 @@
 		font-size: 1.2rem;
 		color: #E2E8F0;
 		margin-bottom: 24px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
 	}
 
 	.input-group {
 		display: flex;
 		flex-direction: column;
-		gap: 8px;
-		margin-bottom: 16px;
+		gap: 10px;
+		margin-bottom: 28px;
+		width: 100%;
+	}
+
+	label {
+		color: #64748B;
+		font-family: 'SFMono-Regular', Consolas, monospace;
+		font-size: 0.75rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		user-select: none;
 	}
 
 	input {
@@ -77,11 +90,35 @@
 		font-family: monospace;
 		font-size: 1rem;
   		transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+
+		/* 1. Egen CSS-variabel for synligheten her på input-feltet */
+  		--placeholder-opacity: 1;
+
+		/* 2. Animasjonen settes direkte på selve input-feltet i stedet! */
+		animation: terminal-blink 1s step-start infinite;
 	}
 
 	input::placeholder {
 		color: #4A5568;
-		font-family: monospace;
+		font-family: 'SFMono-Regular', Consolas, monospace;
+		font-size: 0.85rem;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+  		opacity: var(--placeholder-opacity);
+	}
+
+	input:focus::placeholder {
+		animation: none;
+		opacity: 0.3;
+	}
+
+	@keyframes terminal-blink {
+		0%, 100% {
+			--placeholder-opacity: 1;
+		}
+		50% {
+			--placeholder-opacity: 0;
+		}
 	}
 
 	input:focus {
@@ -89,6 +126,8 @@
 		background-color: #0D1117;
 		border-color: #4DEEEA;
 		box-shadow: 0 0 12px rgba(77, 238, 234, 0.4);
+		animation: none;
+  		--placeholder-opacity: 0.3;
 	}
 
 	button {
