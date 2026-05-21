@@ -6,4 +6,7 @@ import BoardColumn from './components/BoardColumn.vue';
 <template>
     <BoardColumn></BoardColumn>
     <BoardColumn></BoardColumn>
+    <NuxtLayout>
+        <NuxtPage />
+    </NuxtLayout>
 </template>

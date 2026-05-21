@@ -51,8 +51,8 @@
 	input {
 		background-color: #e5e4e4;
 		border: none;
-		color: grey;
-		padding: 10px;
+		color: #111;
+		padding: 12px;
 		border-radius: 8px;
 	}
 
