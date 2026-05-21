@@ -14,7 +14,7 @@
 			<h2 class="form-title">Logg inn på terminalen</h2>
 			
 			<div class="input-group">
-				<label>Brukernavn</label>
+				<label>Brukernavn:</label>
 				<input type="text" placeholder="Ditt brukernavn..." />
 			</div>
 			
@@ -25,10 +25,10 @@
 
 <style scoped>
 	.login-box {
-		background-color: #221c2b;
+		background-color: #f4f4f4;
 		padding: 40px;
-		border-radius: 8px;
-		border: 1px solid #becfe4;
+		border-radius: 16px;
+		border: none;
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 		width: 100%;
 		max-width: 400px;
@@ -37,7 +37,7 @@
 	.form-title {
 		text-align: center;
 		font-size: 1.2rem;
-		color: #E4E4E4;
+		color: #111;
 		margin-bottom: 24px;
 	}
 
@@ -49,20 +49,21 @@
 	}
 
 	input {
-		background-color: #0e0915;
-		border: 1px solid #221c2b;
-		color: #E4E4E4;
+		background-color: #e5e4e4;
+		border: none;
+		color: grey;
 		padding: 10px;
-		border-radius: 4px;
+		border-radius: 8px;
 	}
 
 	button {
-		background-color: #bd3fd8;
-		color: #0e0915;
+		background-color: #333d7b;
+		color: whitesmoke;
 		border: none;
 		padding: 12px;
-		border-radius: 4px;
+		border-radius: 8px;
 		font-weight: bold;
+		letter-spacing: 0.5px;
 		cursor: pointer;
 		width: 100%;
 	}
