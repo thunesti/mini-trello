@@ -1,5 +1,5 @@
 <template>
     <div>
-        <h1>Team oppgave side</h1>
+        <h1>Her kommer menyen...</h1>
     </div>
 </template>
