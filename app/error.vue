@@ -14,9 +14,9 @@
   <div class="error-layout">
     <main class="error-container">
       <div class="terminal-header">
-        <span class="terminal-dot red"></span>
-        <span class="terminal-dot yellow"></span>
-        <span class="terminal-dot green"></span>
+        <span class="terminal-dot i"></span>
+        <span class="terminal-dot ii"></span>
+        <span class="terminal-dot iii"></span>
         <span class="terminal-title">APP_CONSOLE_DUMP.ERR</span>
       </div>
 
@@ -59,8 +59,8 @@
 
     .error-container {
         background-color: #161B22;
-        border: 1px solid rgba(255, 0, 127, 0.3);
-        box-shadow: 0 0 30px rgba(255, 0, 127, 0.08);
+        border: 1px solid rgba(255, 140, 0, 0.3);
+        box-shadow: 0 0 30px rgba(255, 140, 0, 0.08);
         border-radius: 8px;
         width: 100%;
         max-width: 550px;
@@ -78,15 +78,16 @@
     }
 
     .terminal-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        opacity: 0.6;
-    }
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
 
-    .terminal-dot.red { background-color: #FF007F; opacity: 0.9; }
-    .terminal-dot.yellow { background-color: #F59E0B; }
-    .terminal-dot.green { background-color: #10B981; }
+    .terminal-dot.i { background-color: #FF8C00; }
+    .terminal-dot.ii { background-color: rgba(255, 140, 0, 0.5); }
+    .terminal-dot.iii { background-color: rgba(255, 140, 0, 0.2); }
 
     .terminal-title {
         color: #64748B;
@@ -105,7 +106,7 @@
     }
 
     .error-code {
-        color: #FF007F;
+        color: #FF8C00;
         font-size: 2.5rem;
         font-weight: 900;
         margin: 0;
@@ -127,7 +128,7 @@
     }
 
     .blink-warning {
-        color: #FF007F;
+        color: #FF8C00;
         animation: alarm-blink 1s step-start infinite;
     }
 
@@ -197,7 +198,7 @@
     }
 
     @keyframes alarm-blink {
-    0%, 100% { color: #FF007F; }
+    0%, 100% { color: #FF8C00; }
     50% { color: #64748B; }
     }
 </style>
