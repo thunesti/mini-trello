@@ -1,6 +1,10 @@
 <script>
-const header = "Test"
-const text = "Test info for board"
+ export default {
+    props: [
+        'header',
+        'text'
+    ]
+ }
 </script>
 <template>
 <div>
