@@ -168,7 +168,7 @@
 
     .stealth-btn {
         background-color: #0D1117;
-        color: #4DEEEA; /* Laser Cyan tekst */
+        color: #4DEEEA;
         border: 1px solid #4DEEEA;
         padding: 14px;
         border-radius: 6px;

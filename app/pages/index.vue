@@ -23,10 +23,10 @@
 
 	<main class="login-box">
 		<form @submit.prevent="handleLogin" class="login-form">
-			<h2 class="form-title">Identifiser deg</h2>
+			<h2 class="form-title">Innlogging</h2>
 			
 			<div class="input-group">
-				<label for="username">Navn / Brukernavn:</label>
+				<label for="username">Brukernavn:</label>
 				<input 
 				id="username"
 				v-model="username" 
@@ -36,7 +36,7 @@
 				/>
 			</div>
 			
-			<button type="submit">Logg inn</button>
+			<button type="submit">FORTSETT</button>
 		</form>
 	</main>
 </template>
