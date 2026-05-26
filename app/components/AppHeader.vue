@@ -35,7 +35,7 @@
       </NuxtLink>
     </nav>
 
-    <div class="user-section" v-if="user.username">
+    <div class="user-section" v-if="user && user.username">
       <div class="user-info">
         <img 
           :src="user.avatarUrl" 

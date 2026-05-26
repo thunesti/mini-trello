@@ -26,7 +26,9 @@ export const useUserStore = defineStore('user', () => {
     isAuthenticated.value = true
 
     // Lagre i nettleseren så man slipper å logge inn på nytt ved sideoppdatering (F5)
-    localStorage.setItem('user_session', JSON.stringify(userData))
+    if (import.meta.client) {
+        localStorage.setItem('user_session', JSON.stringify(userData))
+    }
     return true
   }
 
@@ -34,7 +36,9 @@ export const useUserStore = defineStore('user', () => {
   function logout() {
     user.value = null
     isAuthenticated.value = false
-    localStorage.removeItem('user_session')
+    if (import.meta.client) {
+        localStorage.removeItem('user_session')
+    }
     navigateTo('/')
   }
 
