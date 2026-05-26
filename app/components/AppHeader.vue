@@ -1,5 +1,20 @@
 <script setup lang="ts">
-    const userStore = useUserStore()
+    import type { User } from '~/types/types'
+
+    // Definerer props og sier at vi SKAL ha et User-objekt
+    defineProps<{
+      user: User
+    }>()
+
+    // Definerer hva denne komponenten har lov til å rope oppover
+    const emit = defineEmits<{
+      (e: 'logout'): void
+    }>()
+
+    function triggerLogout() {
+      // Beskjeden sendes oppover til dashboard.vue
+      emit('logout')
+    }
 </script>
 
 <template>
@@ -20,20 +35,20 @@
       </NuxtLink>
     </nav>
 
-    <div class="user-section" v-if="userStore.isAuthenticated">
+    <div class="user-section" v-if="user.username">
       <div class="user-info">
         <img 
-          :src="userStore.user?.avatarUrl" 
+          :src="user.avatarUrl" 
           alt="Avatar" 
           class="user-avatar"
         />
         <div class="user-meta">
           <span class="user-status">ONLINE</span>
-          <span class="user-name">{{ userStore.user?.name }}</span>
+          <span class="user-name">{{ user.name }}</span>
         </div>
       </div>
 
-      <button @click="userStore.logout" class="logout-btn">
+      <button @click="triggerLogout" class="logout-btn">
         LOGG UT
       </button>
     </div>
