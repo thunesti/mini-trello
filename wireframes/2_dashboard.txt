@@ -2,11 +2,13 @@
 | [M-T Logo]  Dashboard  Innstillinger                     (Ola Nordmann) |
 +-----------------------------------------------------------------------+
 |                                                                       |
+|  Hei, Ola!                                                            |
+|                                                                       |
 |  Dine Prosjekter                                  [+ Nytt Prosjekt]   |
 |  -------------------------------------------------------------------  |
 |                                                                       |
 |  +-----------------+  +-----------------+  +-----------------+        |
-|  | Eksamen Vår 2026 |  | Nettside Kunde X|  | Julebord 2026   |        |
+|  | Eksamen Vår 2026|  | Nettside Kunde X|  | Julebord 2026   |        |
 |  |                 |  |                 |  |                 |        |
 |  | 5 oppgaver      |  | 12 oppgaver     |  | 0 oppgaver      |        |
 |  | Siste endring:id|  | Siste endring:id|  | Siste endring:id|        |
