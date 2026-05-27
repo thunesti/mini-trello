@@ -11,7 +11,7 @@ const currentUserName = computed(() => userStore.user?.name || 'Gjest')
 <template>
     <div class="dashboard-container">
         <main class="dashboard-content">
-            <p>VELKOMMEN, {{ currentUserName }}!</p>
+            <p>Hei, {{ currentUserName }}!</p>
         </main>
     </div>
     

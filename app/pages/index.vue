@@ -35,7 +35,7 @@ function handleLogin() {
 
     <main class="login-box">
         <form @submit.prevent="handleLogin" class="login-form">
-            <h2 class="form-title">LOGG INN</h2>
+            <h2 class="form-title">INNLOGGING</h2>
             
             <div class="input-group">
                 <label for="username">Brukernavn:</label>
@@ -43,7 +43,7 @@ function handleLogin() {
                     id="username"
                     v-model="usernameInput" 
                     type="text" 
-                    placeholder="_" 
+                    placeholder="Skriv inn navnet ditt..." 
                     autocomplete="off"
                     required
                 />
@@ -108,12 +108,6 @@ function handleLogin() {
         font-family: monospace;
         font-size: 1rem;
         transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
-
-        /* Egen CSS-variabel for synligheten her på input-feltet */
-        --placeholder-opacity: 1;
-
-        /* Animasjonen settes direkte på selve input-feltet i stedet! */
-        animation: terminal-blink 1s step-start infinite;
     }
 
     input::placeholder {
@@ -122,11 +116,10 @@ function handleLogin() {
         font-size: 0.85rem;
         letter-spacing: 1.5px;
         text-transform: uppercase;
-        opacity: var(--placeholder-opacity);
+		opacity: 0.9
     }
 
     input:focus::placeholder {
-        animation: none;
         opacity: 0.3;
     }
 
@@ -143,22 +136,11 @@ function handleLogin() {
         font-weight: bold;
     }
 
-    @keyframes terminal-blink {
-        0%, 100% {
-            --placeholder-opacity: 1;
-        }
-        50% {
-            --placeholder-opacity: 0;
-        }
-    }
-
     input:focus {
         outline: none;
         background-color: #0D1117;
         border-color: #4DEEEA;
         box-shadow: 0 0 12px rgba(77, 238, 234, 0.4);
-        animation: none;
-        --placeholder-opacity: 0.3;
     }
 
     button {
