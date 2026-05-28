@@ -7,13 +7,20 @@
     // Henter ut navnet til velkomstmeldingen på skjermen
     const currentUserName = computed(() => userStore.user?.name || 'Gjest')
 
-    function createNewProject() {
-        const name = prompt("Skriv inn navn på nytt prosjekt:")
-        if (name && name.trim()) {
-            // Her kan du kalle en funksjon i boardStore senere for å legge til
-            // f.eks. boardStore.addProject(name)
-            alert(`Oppretter prosjekt: ${name}`);
-        }
+    // Holder på teksten i inputfeltet
+    const newProjectName = ref('')
+
+    function handleCreateProject() {
+        const name = newProjectName.value.trim()
+        
+        if (!name) return
+
+        // Her kan du kalle storen din senere, f.eks:
+        // boardStore.addProject(name)
+        alert(`Oppretter prosjekt: ${name}`)
+
+        // Tømmer inputfeltet etter at prosjektet er opprettet
+        newProjectName.value = ''
     }
 </script>
 
@@ -26,9 +33,18 @@
 
             <section class="projects-header">
                 <h1 class="section-title">Dine Prosjekter</h1>
-                <button @click="createNewProject" class="add-project-btn">
-                    + Nytt Prosjekt
-                </button>
+                <form @submit.prevent="handleCreateProject" class="add-project-form">
+                    <input 
+                        v-model="newProjectName"
+                        type="text" 
+                        placeholder="PROSJEKTNAVN..." 
+                        class="project-input"
+                        autocomplete="off"
+                    />
+                    <button type="submit" class="add-project-btn">
+                        + Nytt Prosjekt
+                    </button>
+                </form>
             </section>
 
             <section class="projects-grid">
@@ -87,6 +103,7 @@
         border-bottom: 1px solid #222C3A;
         padding-bottom: 16px;
         margin-bottom: 30px;
+        gap: 20px;
     }
 
     .section-title {
@@ -95,24 +112,55 @@
         letter-spacing: -0.5px;
     }
 
+    /* Form-container som samler input og knapp til høyre */
+    .add-project-form {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    /* Input-feltet */
+    .project-input {
+        background-color: #161B22;;
+        border: 1px solid #30363D;
+        color: #E2E8F0;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-family: 'SFMono-Regular', Consolas, monospace;
+        font-size: 0.8rem;
+        width: 180px;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-input::placeholder {
+        color: #E2E8F0;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    .project-input:focus {
+        outline: none;
+        border-color: #4DEEEA;
+        box-shadow: 0 0 8px rgba(77, 238, 234, 0.3);
+    }
+
+    /* Knappen */
     .add-project-btn {
-        background: transparent;
-        color: #4DEEEA;
-        border: 1px solid #4DEEEA;
+        background: #4DEEEA;
+        color: #0D1117;;
+        border: none;
         border-radius: 4px;
         font-family: 'SFMono-Regular', Consolas, monospace;
         font-size: 0.9rem;
         font-weight: bold;
         cursor: pointer;
-        transition: color 0.2s ease, transform 0.1s ease;
+        transition: all 0.2s ease;
         padding: 6px 12px;
+        white-space: nowrap;
     }
 
     .add-project-btn:hover {
-        background-color: #4DEEEA;
-        color: #0D1117;
         box-shadow: 0 0 15px rgba(77, 238, 234, 0.5);
-        transform: translateY(-1px);
     }
 
     /* Prosjekt-grid og kort */
