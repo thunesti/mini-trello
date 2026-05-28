@@ -2,9 +2,12 @@
 import type { User } from '~/types/types'
 
 const userStore = useUserStore()
+const boardStore = useBoardStore()
 
-// Sjekker om det finnes en lagret økt i localStorage når appen laster
+// Initialiserer både brukeren og prosjektene ved oppstart/refresh
 userStore.initializeAuth()
+boardStore.initializeBoards()
+
 
 // Pakker ut brukerdataene trygt fra Pinia-storen
 const currentUser = computed<User>(() => ({

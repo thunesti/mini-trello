@@ -14,12 +14,7 @@
         const name = newProjectName.value.trim()
         
         if (!name) return
-
-        // Her kan du kalle storen din senere, f.eks:
-        // boardStore.addProject(name)
-        alert(`Oppretter prosjekt: ${name}`)
-
-        // Tømmer inputfeltet etter at prosjektet er opprettet
+        boardStore.addProject(name)
         newProjectName.value = ''
     }
 </script>
