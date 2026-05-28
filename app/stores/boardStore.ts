@@ -1,25 +1,11 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
+import type { Project } from '~/types/types'
 
 export const useBoardStore = defineStore('board', () => {
     
     // --- STATE ---
-    const projects = ref([
-        {
-            id: 1,
-            name: 'Mini Trello',
-            todo: [
-                { id: 1, title: 'Design header' },
-                { id: 2, title: 'Lag login side' },
-            ],
-            inProgress: [
-                { id: 3, title: 'Velg farger' },
-            ],
-            done: [
-                { id: 4, title: 'Spør Geir om hjelp' },
-            ],
-        },
-    ])
+    const projects = ref<Project[]>([])
 
     // --- ACTIONS ---
     // Funksjonen som dashboardet kaller for å dytte inn et nytt prosjekt

@@ -47,6 +47,7 @@
                     v-for="project in boardStore.projects"
                     :key="project.id"
                     class="project-card"
+                    @click="navigateTo(`/project/${project.id}`)"
                 >
                     <h2 class="project-name">{{ project.name }}</h2>
                     

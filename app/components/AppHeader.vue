@@ -111,7 +111,7 @@
         display: flex;
         align-items: center;
         gap: 12px;
-        border-right: 1px solid #222C3A;
+        border-right: 1px solid #64748B;;
         padding-right: 20px;
     }
 
@@ -146,7 +146,7 @@
     .logout-btn {
         background: transparent;
         color: #64748B;
-        border: 1px solid #222C3A;
+        border: 1px solid #64748B;;
         padding: 8px 14px;
         border-radius: 4px;
         font-family: 'SFMono-Regular', Consolas, monospace;
